@@ -1,4 +1,5 @@
-import { Firebase, FirebaseRef } from '../lib/firebase';
+
+const Firebase = null;
 
 /**
   * Get this User's Favourite Recipes
@@ -9,7 +10,7 @@ export function getFavourites(dispatch) {
   const UID = Firebase.auth().currentUser.uid;
   if (!UID) return false;
 
-  const ref = FirebaseRef.child(`favourites/${UID}`);
+  const ref = null;
 
   return ref.on('value', (snapshot) => {
     const favs = snapshot.val() || [];
